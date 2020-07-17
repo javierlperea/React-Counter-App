@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import CounterApp from './CounterApp';
+import './index.css'
+// import PrimeraApp from './PrimeraApp';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//Accedo al div a donde renderizo mi componento
+const divRoot = document.getElementById('root')
+//renderizo y comunico componentes (envio un objeto de tipo number)
+ReactDOM.render( <CounterApp  />, divRoot );
+// ReactDOM.render( <PrimeraApp saludo={'Hola soy Goku '} />, divRoot );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
